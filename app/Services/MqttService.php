@@ -29,7 +29,7 @@ class MqttService
             Log::info("Publishing discovery msg for device: $device->id", [$haData]);
 
             $this->client->publish(
-                "homeassistant/climate/$device->id/config",
+                "homeassistant/water_heater/$device->id/config",
                 json_encode($haData),
                 0,
                 true
